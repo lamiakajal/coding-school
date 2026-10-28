@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
@@ -7,7 +6,7 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         {/* Main Footer Links */}
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {/* Brand Col */}
+          {/* Brand Column */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-blue-600 text-white font-bold text-lg">
@@ -18,41 +17,35 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-sm text-slate-500 leading-relaxed">
-              Empowering next-generation developers through production-grade
-              full-stack skills and mentorship.
+              Empowering developers through modern full-stack engineering
+              courses, hands-on production code, and personalized mentorship.
             </p>
           </div>
 
-          {/* Navigation Links */}
+          {/* Course Links */}
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-wider text-slate-900 mb-4">
-              Quick Links
+              Courses
             </h4>
             <ul className="space-y-2 text-sm text-slate-600">
               <li>
-                <Link href="#home" className="hover:text-blue-600 transition">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#courses"
-                  className="hover:text-blue-600 transition"
-                >
-                  Courses
+                <Link href="#skills" className="hover:text-blue-600 transition">
+                  Frontend Mastery
                 </Link>
               </li>
               <li>
                 <Link href="#skills" className="hover:text-blue-600 transition">
-                  Tech Stack
+                  Backend Architecture
                 </Link>
               </li>
               <li>
-                <Link
-                  href="#features"
-                  className="hover:text-blue-600 transition"
-                >
-                  Features
+                <Link href="#skills" className="hover:text-blue-600 transition">
+                  Full-Stack Next.js
+                </Link>
+              </li>
+              <li>
+                <Link href="#skills" className="hover:text-blue-600 transition">
+                  Git & Team Workflows
                 </Link>
               </li>
             </ul>
@@ -70,7 +63,7 @@ export default function Footer() {
                   target="_blank"
                   className="hover:text-blue-600 transition"
                 >
-                  GitHub
+                  GitHub Profile
                 </Link>
               </li>
               <li>
@@ -78,7 +71,7 @@ export default function Footer() {
                   href="#discord"
                   className="hover:text-blue-600 transition"
                 >
-                  Discord Community
+                  Discord Server
                 </Link>
               </li>
               <li>
@@ -86,19 +79,27 @@ export default function Footer() {
                   href="#telegram"
                   className="hover:text-blue-600 transition"
                 >
-                  Telegram Support
+                  Telegram Channel
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="#support"
+                  className="hover:text-blue-600 transition"
+                >
+                  24/7 Student Forum
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Head Office / Campus info */}
+          {/* Campus Location */}
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-wider text-slate-900 mb-4">
-              Campus Info
+              Campus
             </h4>
             <p className="text-sm text-slate-600 leading-relaxed">
-              Coding School Learning Hub
+              Coding School HQ
               <br />
               Dhaka, Bangladesh.
               <br />
@@ -107,19 +108,24 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Payment Badges & Copyright */}
+        {/* Bottom Custom Badges and Copyright (Pure CSS, No Image) */}
         <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-slate-100 pt-8 md:flex-row">
-          <p className="text-xs text-slate-400">
+          <p className="text-xs text-slate-500">
             © {new Date().getFullYear()} Coding School. All rights reserved.
           </p>
 
-          <div className="relative h-6 w-72 max-w-full">
-            <Image
-              src="/assets/footer.png"
-              alt="Supported payment systems"
-              fill
-              className="object-contain"
-            />
+          {/* Custom System Status Badges */}
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="inline-flex items-center rounded-md bg-emerald-50 px-2.5 py-1 text-xs font-medium text-emerald-700 border border-emerald-200">
+              <span className="mr-1.5 h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
+              Systems Online
+            </span>
+            <span className="inline-flex items-center rounded-md bg-blue-50 px-2.5 py-1 text-xs font-medium text-blue-700 border border-blue-200">
+              Next.js 15 Ready
+            </span>
+            <span className="inline-flex items-center rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-600 border border-slate-200">
+              SSL Secured
+            </span>
           </div>
         </div>
       </div>
