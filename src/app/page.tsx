@@ -2,6 +2,7 @@ import Hero from "./components/sections/Hero";
 import Stats from "./components/sections/Stats";
 import Skills from "./components/sections/Skills";
 import Features from "./components/sections/Features";
+import Campus from "./components/sections/Campus";
 
 export default function HomePage() {
   return (
@@ -17,6 +18,9 @@ export default function HomePage() {
 
       {/* 4. Alternating Feature Highlights */}
       <Features />
+
+      {/* 5. Campus Lab and Head Office Showcase */}
+      <Campus />
     </div>
   );
 }
