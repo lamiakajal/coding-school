@@ -1,4 +1,3 @@
-// Import page sections
 import Hero from "./components/sections/Hero";
 import Stats from "./components/sections/Stats";
 import Skills from "./components/sections/Skills";
