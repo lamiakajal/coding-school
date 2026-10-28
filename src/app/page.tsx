@@ -1,6 +1,7 @@
 import Hero from "./components/sections/Hero";
 import Stats from "./components/sections/Stats";
 import Skills from "./components/sections/Skills";
+import Features from "./components/sections/Features";
 
 export default function HomePage() {
   return (
@@ -13,6 +14,9 @@ export default function HomePage() {
 
       {/* 3. Core Tech Stack and Skills */}
       <Skills />
+
+      {/* 4. Alternating Feature Highlights */}
+      <Features />
     </div>
   );
 }
