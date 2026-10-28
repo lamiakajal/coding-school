@@ -2,6 +2,8 @@ import Hero from "./components/sections/Hero";
 import Stats from "./components/sections/Stats";
 import Skills from "./components/sections/Skills";
 import Features from "./components/sections/Features";
+import Courses from "./components/sections/Courses";
+import Instructors from "./components/sections/Instructors";
 import Campus from "./components/sections/Campus";
 
 export default function HomePage() {
@@ -19,7 +21,13 @@ export default function HomePage() {
       {/* 4. Alternating Feature Highlights */}
       <Features />
 
-      {/* 5. Campus Lab and Head Office Showcase */}
+      {/* 5. Career Courses Track */}
+      <Courses />
+
+      {/* 6. Lead Mentors Showcase */}
+      <Instructors />
+
+      {/* 7. Campus Lab and Transformation Roadmap */}
       <Campus />
     </div>
   );
