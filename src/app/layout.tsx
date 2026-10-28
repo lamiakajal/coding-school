@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-// Relative path imports matching your exact folder tree
+// Layout components
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 
@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="min-h-screen flex flex-col antialiased">
+      <body className="min-h-screen flex flex-col antialiased bg-slate-50 text-slate-900">
         {/* Persistent Global Header */}
         <Navbar />
 
