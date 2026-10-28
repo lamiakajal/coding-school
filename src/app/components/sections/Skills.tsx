@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 
-// Skill card structure definition
 interface Skill {
   name: string;
   category: "frontend" | "backend" | "tools";
@@ -11,7 +10,6 @@ interface Skill {
   tagText: string;
 }
 
-// Complete skills inventory matching your 1st reference screenshot
 const skillsList: Skill[] = [
   {
     name: "HTML",
@@ -123,15 +121,14 @@ export default function Skills() {
           </p>
         </div>
 
-        {/* Top 4 Interactive Tabs (Matching Screenshot 1) */}
+        {/* Top 4 Interactive Tabs with Pop Animations */}
         <div className="grid grid-cols-2 gap-4 lg:grid-cols-4 mb-10">
-          {/* Tab 1: All Skills */}
           <button
             onClick={() => setActiveTab("all")}
-            className={`rounded-2xl p-5 text-left border transition-all ${
+            className={`rounded-2xl p-5 text-left border transition-all duration-300 cursor-pointer ${
               activeTab === "all"
-                ? "bg-rose-50 border-rose-300 ring-2 ring-rose-400 shadow-md"
-                : "bg-white border-slate-200 hover:border-slate-300"
+                ? "bg-rose-50 border-rose-300 ring-2 ring-rose-400 shadow-lg scale-102"
+                : "bg-white border-slate-200 hover:border-slate-300 hover:shadow"
             }`}
           >
             <div className="flex items-center justify-between mb-4">
@@ -144,13 +141,12 @@ export default function Skills() {
             <p className="text-xs text-slate-500 mt-1">Everything I use</p>
           </button>
 
-          {/* Tab 2: Frontend */}
           <button
             onClick={() => setActiveTab("frontend")}
-            className={`rounded-2xl p-5 text-left border transition-all ${
+            className={`rounded-2xl p-5 text-left border transition-all duration-300 cursor-pointer ${
               activeTab === "frontend"
-                ? "bg-blue-50 border-blue-300 ring-2 ring-blue-400 shadow-md"
-                : "bg-white border-slate-200 hover:border-slate-300"
+                ? "bg-blue-50 border-blue-300 ring-2 ring-blue-400 shadow-lg scale-102"
+                : "bg-white border-slate-200 hover:border-slate-300 hover:shadow"
             }`}
           >
             <div className="flex items-center justify-between mb-4">
@@ -163,13 +159,12 @@ export default function Skills() {
             <p className="text-xs text-slate-500 mt-1">Interfaces & motion</p>
           </button>
 
-          {/* Tab 3: Backend & Data */}
           <button
             onClick={() => setActiveTab("backend")}
-            className={`rounded-2xl p-5 text-left border transition-all ${
+            className={`rounded-2xl p-5 text-left border transition-all duration-300 cursor-pointer ${
               activeTab === "backend"
-                ? "bg-emerald-50 border-emerald-300 ring-2 ring-emerald-400 shadow-md"
-                : "bg-white border-slate-200 hover:border-slate-300"
+                ? "bg-emerald-50 border-emerald-300 ring-2 ring-emerald-400 shadow-lg scale-102"
+                : "bg-white border-slate-200 hover:border-slate-300 hover:shadow"
             }`}
           >
             <div className="flex items-center justify-between mb-4">
@@ -182,13 +177,12 @@ export default function Skills() {
             <p className="text-xs text-slate-500 mt-1">APIs, data & auth</p>
           </button>
 
-          {/* Tab 4: Tools & AI */}
           <button
             onClick={() => setActiveTab("tools")}
-            className={`rounded-2xl p-5 text-left border transition-all ${
+            className={`rounded-2xl p-5 text-left border transition-all duration-300 cursor-pointer ${
               activeTab === "tools"
-                ? "bg-purple-50 border-purple-300 ring-2 ring-purple-400 shadow-md"
-                : "bg-white border-slate-200 hover:border-slate-300"
+                ? "bg-purple-50 border-purple-300 ring-2 ring-purple-400 shadow-lg scale-102"
+                : "bg-white border-slate-200 hover:border-slate-300 hover:shadow"
             }`}
           >
             <div className="flex items-center justify-between mb-4">
@@ -202,16 +196,15 @@ export default function Skills() {
           </button>
         </div>
 
-        {/* Dynamic Skill Cards Grid */}
+        {/* Dynamic Skill Cards Grid with Smooth Transitions */}
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {filteredSkills.map((skill) => (
             <div
               key={skill.name}
-              className="group relative rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-lg"
+              className="group relative rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-blue-400 hover:shadow-xl"
             >
-              {/* Category Badge */}
               <div className="flex items-center justify-between mb-4">
-                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-100 font-bold text-slate-800 text-sm group-hover:scale-105 transition-transform">
+                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-100 font-bold text-slate-800 text-sm transition-transform duration-300 group-hover:scale-110 group-hover:bg-blue-50 group-hover:text-blue-600">
                   {skill.tagText}
                 </span>
                 <span className="text-[10px] font-bold tracking-wider text-slate-400 uppercase">
@@ -219,8 +212,7 @@ export default function Skills() {
                 </span>
               </div>
 
-              {/* Title & Description */}
-              <h4 className="text-base font-bold text-slate-900">
+              <h4 className="text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
                 {skill.name}
               </h4>
               <p className="mt-2 text-xs text-slate-500 leading-relaxed">
