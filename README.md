@@ -1,146 +1,125 @@
-🎓 Coding School — Modern Full-Stack Developer Platform
+# 🎓 Coding School — Modern Full-Stack Developer Platform
 
-A high-performance, responsive full-stack developer learning hub built with Next.js 15 (App Router), TypeScript, and Tailwind CSS v4. The platform delivers a production-grade educational showcase featuring an interactive tech stack directory, 60 FPS HTML5 canvas physics animations, comprehensive career tracks, and an instructor mentor roster.
+A production-grade, fully responsive edtech web platform designed for software engineers. Built with **Next.js 15 (App Router)**, **TypeScript**, and **Tailwind CSS v4**, featuring an interactive tech stack directory, an ambient 60 FPS HTML5 Canvas particle physics engine, comprehensive career tracks, and an active mentor roster.
 
-🔗 Live Deployment & Source Repository
+---
 
-🌐 Live Production Application: https://lamiakajal.github.io/coding-school/
+## 🔗 Live Deployments & Repository Links
 
-📁 GitHub Source Repository: https://github.com/lamiakajal/coding-school
+- **🌐 Live Production Platform:** [https://lamiakajal.github.io/coding-school/](https://lamiakajal.github.io/coding-school/)
+- **📁 GitHub Source Repository:** [https://github.com/lamiakajal/coding-school](https://github.com/lamiakajal/coding-school)
 
-🚀 Key Features
+---
 
-⚡ 60 FPS HTML5 Canvas Physics Engine (FloatingElements.tsx):
+## ✨ Key Features & Architecture
 
-Hardware-accelerated canvas particle layer with dynamic upward drift, boundary wrap-around, and specular glass highlights floating non-blockingly (pointer-events-none z-30) over all sections and media.
+- **⚡ 60 FPS Canvas Physics Engine (`FloatingElements.tsx`):**
+  - Custom hardware-accelerated HTML5 Canvas particle layer.
+  - Realistic specular glass reflections, multi-color ambient glow, and non-blocking pointer events (`pointer-events-none z-30`) drifting smoothly across all sections and images.
 
-🎯 Interactive Core Tech Stack Directory (Skills.tsx):
+- **🎯 Interactive Core Tech Stack Directory (`Skills.tsx`):**
+  - Category-based interactive filtering across **All Skills**, **Frontend**, **Backend & Data**, and **Tools & AI**.
+  - Reactive counters and smooth responsive card transitions.
 
-Category-based interactive filtering across All Skills, Frontend, Backend & Data, and Tools & AI with reactive counters and responsive card transitions.
+- **🎨 High-Converting Hero Banner (`Hero.tsx`):**
+  - Ambient radial glow with continuous CSS floating loops and primary call-to-action routing.
 
-🎨 High-Converting Hero Banner (Hero.tsx):
+- **📊 Metrics & Growth Highlights (`Stats.tsx`):**
+  - Gradient-tinted milestone indicators highlighting active graduates, placements, and enrolled students.
 
-Ambient radial glow with continuous CSS floating loops and primary call-to-action routing.
+- **🧩 Production-Grade Modular Sections:**
+  - **Alternating Features (`Features.tsx`):** Deep dives into Project-Based Learning, 24/7 Lifetime Support, and Learn to Earn.
+  - **Career Tracks (`Courses.tsx`):** Frontend architecture, Next.js full-stack development, and backend systems pathways with syllabus highlights.
+  - **Lead Mentors Roster (`Instructors.tsx`):** Industry practitioners with real-world credentials, bios, and technical specialties.
+  - **Transformation Lab & Roadmap (`Campus.tsx`):** Physical Banani learning station paired with a 4-step transformation blueprint.
+  - **Social Proof (`Testimonials.tsx`):** Graduate success stories with ratings and company placement credentials.
+  - **Interactive FAQ Accordion (`FAQ.tsx`):** Smooth accordion resolving prospective student queries.
+  - **Final Call to Action (`CallToAction.tsx`):** High-contrast cohort enrollment drive.
 
-📊 Growth Metrics & Stat Callouts (Stats.tsx):
+---
 
-Gradient-tinted milestone indicators highlighting graduates, successful placements, and enrolled students.
+## 🛠️ Architecture & Tech Stack
 
-🧩 Production-Grade Modular Sections:
+| Layer                   | Technology            | Purpose                                                            |
+| :---------------------- | :-------------------- | :----------------------------------------------------------------- |
+| **Framework**           | Next.js 15 (React 19) | Server-rendered App Router architecture and static generation      |
+| **Language**            | TypeScript 5          | End-to-end type safety and interface definitions                   |
+| **Styling**             | Tailwind CSS v4       | Canonical CSS variables, modern utility classes, and fluid layouts |
+| **Physics / Animation** | HTML5 Canvas 2D API   | Lightweight 60 FPS particle loop without external heavy libraries  |
+| **Asset Delivery**      | `next/image`          | Optimized, responsive image handling                               |
+| **Hosting & CI/CD**     | GitHub Pages / Vercel | Production deployment                                              |
 
-Alternating Value Features (Features.tsx): Deep dives into Project-Based Learning, 24/7 Lifetime Support, and Learn to Earn.
+---
 
-Career Tracks (Courses.tsx): Frontend architecture, Next.js full-stack development, and backend systems pathways with syllabus highlights.
+## 📂 Project Structure
 
-Lead Mentors Roster (Instructors.tsx): Real-world industry engineers with credentials, bio overviews, and technical specialties.
-
-Physical Campus & Roadmap (Campus.tsx): Banani learning station overview paired with a 4-step transformation blueprint.
-
-Social Proof (Testimonials.tsx): Real graduate reviews with ratings and company placement credentials.
-
-Interactive FAQ Accordion (FAQ.tsx): Smooth interactive accordion resolving prospective student inquiries.
-
-Final Action Callout (CallToAction.tsx): High-contrast enrollment drive with next cohort scheduling highlights.
-
-🛠️ Architecture & Tech Stack
-
-Layer
-
-Technology
-
-Purpose
-
-Framework
-
-Next.js 15 (React 19)
-
-Server-rendered App Router architecture and static generation
-
-Language
-
-TypeScript 5
-
-Static typing and interface contracts across components and data
-
-Styling
-
-Tailwind CSS v4
-
-Canonical CSS variables, modern utility classes, and fluid layouts
-
-Physics / Animation
-
-HTML5 Canvas 2D API
-
-Lightweight 60 FPS particle loop without external animation dependencies
-
-Asset Delivery
-
-next/image
-
-Optimized, responsive image handling
-
-Hosting & CI/CD
-
-GitHub Pages
-
-Distributed static hosting
-
-📂 Project Structure
-
+```text
 coding-school/
 ├── public/
-│ └── assets/ # Visual assets (Hero, Lab, Features, Mentors)
+│   └── assets/                     # Visual assets (Hero, Lab, Features, Mentors)
 ├── src/
-│ └── app/
-│ ├── components/
-│ │ ├── layout/
-│ │ │ ├── Navbar.tsx # Responsive header navigation
-│ │ │ └── Footer.tsx # Pure CSS badge system and institutional links
-│ │ ├── layer/
-│ │ │ └── FloatingElements.tsx # 60 FPS HTML5 canvas glass particle engine
-│ │ └── sections/
-│ │ ├── Hero.tsx # Hero banner with ambient glow loop
-│ │ ├── Stats.tsx # Key metrics highlights
-│ │ ├── Skills.tsx # Interactive filterable tech inventory
-│ │ ├── Features.tsx # Alternating core feature showcases
-│ │ ├── Courses.tsx # Career tracks & syllabus cards
-│ │ ├── Instructors.tsx # Active mentor directory
-│ │ ├── Campus.tsx # Computer lab & transformation pillars
-│ │ ├── Testimonials.tsx# Graduate success stories
-│ │ ├── FAQ.tsx # Interactive accordion questions
-│ │ └── CallToAction.tsx# Cohort registration banner
-│ ├── globals.css # Tailwind v4 imports and infinite keyframe rules
-│ ├── layout.tsx # Root HTML wrapper and global metadata
-│ └── page.tsx # Unified landing page assembly
+│   └── app/
+│       ├── components/
+│       │   ├── layout/
+│       │   │   ├── Navbar.tsx      # Responsive header navigation
+│       │   │   └── Footer.tsx      # Pure CSS badge system and links
+│       │   ├── layer/
+│       │   │   └── FloatingElements.tsx # 60 FPS HTML5 canvas glass particle engine
+│       │   └── sections/
+│       │       ├── Hero.tsx        # Hero banner with ambient glow loop
+│       │       ├── Stats.tsx       # Key metrics highlights
+│       │       ├── Skills.tsx      # Interactive filterable tech inventory
+│       │       ├── Features.tsx    # Alternating core feature showcases
+│       │       ├── Courses.tsx     # Career tracks & syllabus cards
+│       │       ├── Instructors.tsx # Active mentor directory
+│       │       ├── Campus.tsx      # Computer lab & transformation pillars
+│       │       ├── Testimonials.tsx# Graduate success stories
+│       │       ├── FAQ.tsx         # Interactive accordion questions
+│       │       └── CallToAction.tsx# Cohort registration banner
+│       ├── globals.css             # Tailwind v4 imports and infinite keyframe rules
+│       ├── layout.tsx              # Root HTML wrapper and global metadata
+│       └── page.tsx                # Unified landing page assembly
 ├── package.json
 ├── tsconfig.json
+├── LICENSE
 └── README.md
+```
 
-💻 Local Development Setup
+---
 
-To run this repository locally on your computer:
+## 💻 Local Development Setup
 
-Clone the repository:
+To run this repository locally:
 
-git clone https://github.com/lamiakajal/coding-school.git
-cd coding-school
+1. **Clone the repository:**
 
-Install project dependencies:
+   ```bash
+   git clone https://github.com/lamiakajal/coding-school.git
+   cd coding-school
+   ```
 
-npm install
+2. **Install project dependencies:**
 
-Start the local development server:
+   ```bash
+   npm install
+   ```
 
-npm run dev
+3. **Start the local development server:**
 
-Open in browser:
-Navigate to http://localhost:3000 to view the application.
+   ```bash
+   npm run dev
+   ```
 
-Verify production build:
+4. **Open in browser:**
+   Navigate to [http://localhost:3000](http://localhost:3000) to view the application.
 
-npm run build
+5. **Verify production build:**
+   ```bash
+   npm run build
+   ```
 
-📄 License
+---
 
-This project is open-source and available under the terms of the MIT License.
+## 📄 License
+
+Distributed under the terms of the [MIT License](LICENSE).
